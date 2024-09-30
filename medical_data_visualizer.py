@@ -23,7 +23,7 @@ def draw_cat_plot():
     df_cat = df_cat.groupby(['cardio', 'variable', 'value']).size().reset_index(name='total')  # Contando as ocorrências de cada combinação
 
     # 7 Criar um gráfico que mostre as contagens dos recursos categóricos usando sns.catplot()
-    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar').fig  # Alterado de 'count' para 'bar'
+    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar').fig 
 
     # 8 Obter a figura para a saída e armazená-la na variável fig
     fig.suptitle('Count of categorical features by Cardio')  # Adicionando um título ao gráfico
